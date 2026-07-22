@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spectral-telemetry"
+version = "0.1.0"
+description = "Streaming spectral-capacity telemetry (soft/hard effective rank) for neural network representations."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Nandan Kumar Jha"}, {name = "Brandon Reagen"}]
+dependencies = ["numpy>=1.24"]
+keywords = ["telemetry", "effective-rank", "spectral", "interpretability",
+            "scaling-laws", "pytorch", "covariance"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.optional-dependencies]
+torch = ["torch>=2.1"]
+dev = ["pytest>=7.4", "ruff>=0.5"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["E402"]  # pytest.importorskip("torch") must precede torch imports
+
+[project.urls]
+Homepage = "https://github.com/optimizer-scaling-laws/spectral-telemetry"
+Repository = "https://github.com/optimizer-scaling-laws/spectral-telemetry"
+Issues = "https://github.com/optimizer-scaling-laws/spectral-telemetry/issues"
+Paper = "https://arxiv.org/abs/2605.21803"
+Upstream = "https://github.com/optimizer-scaling-laws/spectral-scaling-laws"

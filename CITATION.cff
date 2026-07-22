@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the paper below."
+title: "spectral-telemetry"
+type: software
+authors:
+  - family-names: Jha
+    given-names: Nandan Kumar
+  - family-names: Reagen
+    given-names: Brandon
+license: MIT
+repository-code: "https://github.com/optimizer-scaling-laws/spectral-telemetry"
+preferred-citation:
+  type: article
+  title: "Same Architecture, Different Capacity: Optimizer-Induced Spectral Scaling Laws"
+  authors:
+    - family-names: Jha
+      given-names: Nandan Kumar
+    - family-names: Reagen
+      given-names: Brandon
+  year: 2026
+  journal: "arXiv preprint arXiv:2605.21803"
