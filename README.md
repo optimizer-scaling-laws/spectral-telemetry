@@ -148,17 +148,17 @@ analysis. The library validates out-of-range IDs and explicitly reports degenera
 
 ## Metrics
 
-Let \(\lambda_i\) be covariance eigenvalues and
-\(p_i = \lambda_i / \sum_j \lambda_j\).
+Let $\lambda_i$ be covariance eigenvalues and
+$p_i = \lambda_i / \sum_j \lambda_j$.
 
 | Metric | Definition | Interpretation |
 |---|---|---|
-| Soft rank | \(R_1 = \exp(-\sum_i p_i \log p_i)\) | Shannon-balanced effective dimensionality; sensitive to diffuse spectral mass |
-| Hard rank | \(R_2 = 1 / \sum_i p_i^2\) | Participation ratio; more sensitive to dominant modes |
-| Rényi rank | \(R_\alpha = (\sum_i p_i^\alpha)^{1/(1-\alpha)}\) | Continuum of concentration sensitivities; \(\alpha=1\) gives soft rank and \(\alpha=2\) gives hard rank |
+| Soft rank | $R_1 = \exp(-\sum_i p_i \log p_i)$ | Shannon-balanced effective dimensionality; sensitive to diffuse spectral mass |
+| Hard rank | $R_2 = 1 / \sum_i p_i^2$ | Participation ratio; more sensitive to dominant modes |
+| Rényi rank | $R_\alpha = (\sum_i p_i^\alpha)^{1/(1-\alpha)}$ | Continuum of concentration sensitivities; $\alpha=1$ gives soft rank and $\alpha=2$ gives hard rank |
 
 `renyi_rank(eigs, np.inf)` returns the min-entropy rank. Rényi rank is non-increasing in
-\(\alpha\), so `hard_rank <= soft_rank`.
+$\alpha$, so `hard_rank <= soft_rank`.
 
 ## Reliability is part of every record
 
